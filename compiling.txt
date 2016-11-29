@@ -1,0 +1,7 @@
+
+sudo apt-get install libx11-dev
+sudo apt-get install freeglut3-dev
+sudo apt-get install freeglut3
+sudo apt-get install libxmu-dev libxi-dev
+
+g++ -pg -std=c++11 -I/usr/local/boost -I/usr/include/opencv -I/usr/include/GL/ *.cpp -lGL -lGLU -lglut  $(pkg-config opencv --cflags --libs) -L/opt/OpenBLAS/lib/ -lopenblas /usr/local/lib/libdlib.so.19.2.0   -o dense3d
